@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EEB5A92BFE21EAEB8430749 /* Pods_RxPriority.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA428EF6B1B23521AC126FE /* Pods_RxPriority.framework */; };
 		ADA4CD02229872DD00C4F9AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CD01229872DD00C4F9AB /* AppDelegate.swift */; };
 		ADA4CD07229872DD00C4F9AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA4CD05229872DD00C4F9AB /* Main.storyboard */; };
 		ADA4CD09229872F800C4F9AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA4CD08229872F800C4F9AB /* Assets.xcassets */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		785AB729E275AF45ECCEC0C1 /* Pods-RxPriority.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPriority.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxPriority/Pods-RxPriority.release.xcconfig"; sourceTree = "<group>"; };
+		8DA428EF6B1B23521AC126FE /* Pods_RxPriority.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxPriority.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA4CCFE229872DD00C4F9AB /* RxPriority.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxPriority.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA4CD01229872DD00C4F9AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADA4CD06229872DD00C4F9AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		ADA4CD14229874BC00C4F9AB /* TaskListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListController.swift; sourceTree = "<group>"; };
 		ADA4CD172298820100C4F9AB /* AddTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskController.swift; sourceTree = "<group>"; };
 		ADCAA4DF22A49614006FDF25 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		B3EDD69BEB252860B90CD1FD /* Pods-RxPriority.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxPriority.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxPriority/Pods-RxPriority.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EEB5A92BFE21EAEB8430749 /* Pods_RxPriority.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		085F2E1ADB85C5CD725D1B23 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3EDD69BEB252860B90CD1FD /* Pods-RxPriority.debug.xcconfig */,
+				785AB729E275AF45ECCEC0C1 /* Pods-RxPriority.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		ADA4CCF5229872DC00C4F9AB = {
 			isa = PBXGroup;
 			children = (
 				ADA4CD00229872DD00C4F9AB /* RxPriority */,
 				ADA4CCFF229872DD00C4F9AB /* Products */,
+				085F2E1ADB85C5CD725D1B23 /* Pods */,
+				E2C48210E20C62A97BE9F803 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +110,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E2C48210E20C62A97BE9F803 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DA428EF6B1B23521AC126FE /* Pods_RxPriority.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADA4CD10229872F800C4F9AB /* Build configuration list for PBXNativeTarget "RxPriority" */;
 			buildPhases = (
+				81B3C1151D9E7D1999F5E086 /* [CP] Check Pods Manifest.lock */,
 				ADA4CCFA229872DD00C4F9AB /* Sources */,
 				ADA4CCFB229872DD00C4F9AB /* Frameworks */,
 				ADA4CCFC229872DD00C4F9AB /* Resources */,
+				8668F88FBDB4ACE3F7C2B5A6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +185,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81B3C1151D9E7D1999F5E086 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxPriority-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8668F88FBDB4ACE3F7C2B5A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RxPriority/Pods-RxPriority-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxPriority/Pods-RxPriority-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ADA4CCFA229872DD00C4F9AB /* Sources */ = {
@@ -312,6 +379,7 @@
 		};
 		ADA4CD11229872F800C4F9AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3EDD69BEB252860B90CD1FD /* Pods-RxPriority.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -330,6 +398,7 @@
 		};
 		ADA4CD12229872F800C4F9AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 785AB729E275AF45ECCEC0C1 /* Pods-RxPriority.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

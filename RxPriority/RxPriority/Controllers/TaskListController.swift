@@ -6,12 +6,16 @@
 //  Copyright © 2019 Jason Sanchez. All rights reserved.
 //
 
+import Foundation
 import UIKit
+import RxSwift
 
 class TaskListController: UIViewController {
     
     @IBOutlet weak var prioritySegment: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    
+    let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +37,17 @@ extension TaskListController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navC = segue.destination as? UINavigationController,
+            let addTVC = navC.viewControllers.first as? AddTaskController else {
+                fatalError("Controller not found...")
+        }
+        
+        addTVC.taskSubjectObservable
+            .subscribe(onNext: { task in
+                
+                print(task)
+                
+            }).disposed(by: bag)
+    }
 }
