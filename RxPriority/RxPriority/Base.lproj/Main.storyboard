@@ -111,9 +111,17 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add Task" id="DvV-bH-ufu">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="29m-tk-HxF"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="29m-tk-HxF">
+                            <connections>
+                                <action selector="save" destination="l4e-zX-YCx" id="lys-I2-CpU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="prioritySegmentedControl" destination="M4W-Xc-lqk" id="DXT-W9-4oT"/>
+                        <outlet property="taskTitleTextField" destination="qa5-A8-0zy" id="ofE-Qf-GK3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="es7-2i-ZoM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
